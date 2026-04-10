@@ -53,7 +53,8 @@ public class ClassifyController {
             }
 
             boolean isConfident =
-                    apiResponse.probability() >= 0.7 && apiResponse.count() >= 100;
+                    Double.compare(apiResponse.probability(), 0.7) >= 0
+                            && apiResponse.count() >= 100;
 
             // LinkedHashMap preserves field order in the JSON response
             Map<String, Object> data = new LinkedHashMap<>();
