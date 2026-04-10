@@ -18,6 +18,15 @@ public class ClassifyController {
 
     private final RestClient restClient = RestClient.create();
 
+    @GetMapping("/")
+    public ResponseEntity<Object> root() {
+        return ResponseEntity.ok(Map.of(
+                "status", "success",
+                "message", "HNG Stage 0 - Genderize API is running",
+                "endpoint", "/api/classify?name={name}"
+        ));
+    }
+
     @GetMapping("/classify")
     public ResponseEntity<Object> classifyName(
             @RequestParam(value = "name", required = false) String name) {
