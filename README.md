@@ -25,12 +25,12 @@ https://your-app.up.railway.app
 
 ## Error Responses
 
-| Status | Meaning |
-|--------|---------|
-| 400 | Missing or empty name parameter |
-| 422 | Name is not a valid string |
-| 404 | No prediction available for the provided name |
-| 502 | Upstream or server failure |
+| Status | Meaning                                       |
+|--------|-----------------------------------------------|
+| 400    | Missing or empty name parameter               |
+| 422    | Name is not a valid string                    |
+| 404    | No prediction available for the provided name |
+| 502    | Upstream or server failure                    |
 
 ## Tech Stack
 - Java 21
